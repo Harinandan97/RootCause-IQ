@@ -11,7 +11,7 @@ class RootService {
     required String prompt,
   }) async {
     const apiKey =
-        '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';
+        'API KEY';
     const url = 'https://api.openai.com/v1/chat/completions';
 
     dio.options.headers = {
