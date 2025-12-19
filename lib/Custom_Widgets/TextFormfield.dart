@@ -10,6 +10,8 @@ class CustomTextField extends StatelessWidget {
   final InputBorder? border;
 final InputBorder? second;
 final TextEditingController? controller;
+final Color? clr;
+final Color? fclr;
 
   const CustomTextField({
      this.Label,
@@ -19,7 +21,8 @@ final TextEditingController? controller;
     this.border,
     this.second,
     this.controller,
-
+this.clr,
+    this.fclr,
 
   });
 
@@ -27,6 +30,7 @@ final TextEditingController? controller;
   Widget build(BuildContext context) {
     return
       TextFormField(
+
         controller:controller ,
         decoration: InputDecoration(
           filled:filled ?? true,
@@ -36,9 +40,9 @@ final TextEditingController? controller;
 
           floatingLabelBehavior: FloatingLabelBehavior.always,//label always on the top
           enabledBorder:border?? OutlineInputBorder(borderRadius: BorderRadius.circular(20),borderSide: BorderSide(
-            color:Color(0xFFF3F3F3)
+            color:clr ?? Color(0xFFF3F3F3)
           )),
-          focusedBorder:second?? OutlineInputBorder(borderRadius: BorderRadius.circular(20),borderSide: BorderSide(color: Color(0xFFF3F3F3)))
+          focusedBorder:second?? OutlineInputBorder(borderRadius: BorderRadius.circular(20),borderSide: BorderSide(color:fclr?? Color(0xFFF3F3F3)))
 
         ),
       );

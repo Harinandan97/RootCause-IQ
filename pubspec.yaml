@@ -36,8 +36,21 @@ dependencies:
   cupertino_icons: ^1.0.8
   get: ^4.7.2
   provider: ^6.1.5+1
-  firebase_auth: ^6.1.2
+  firebase_auth:
+  flutter_launcher_icons: "^0.13.1"
   shared_preferences:
+  dartz:
+
+  firebase_core: ^3.1.1
+  dio:
+
+
+# Icon Configuration Section
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: false
+  image_path: "assets/images/Round main img.png"
+  adaptive_icon_background: "#3c3f41" # Matches your logo grey
 
 
 dev_dependencies:
